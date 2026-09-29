@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request
 
-from EmotionDetection import emotion_detector
+from EmotionDetection.emotion_detection import emotion_detector
 
 
 app = Flask("Emotion Detection")
@@ -16,7 +16,7 @@ def sent_detector():
     response = emotion_detector(text_to_analyze)
 
     if response["dominant_emotion"] is None:
-        return "Invalid text! Please try again!"
+        return "Invalid input! Try again."
 
     return (
         f"For the given statement, the system response is "

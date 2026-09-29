@@ -2,7 +2,7 @@ import json
 import requests
 
 
-def emotion_detector(text_to_analyze):
+def emotion_detector(text_to_analyse):
     """Analyze text and return emotion scores and dominant emotion."""
     url = (
         "https://sn-watson-emotion.labs.skills.network/"
@@ -16,7 +16,7 @@ def emotion_detector(text_to_analyze):
 
     input_json = {
         "raw_document": {
-            "text": text_to_analyze
+            "text": text_to_analyse
         }
     }
 
